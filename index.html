@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Planner - Advanced</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Penny Planner</h1>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </header>
+
+        <section class="summary">
+            <h2>Financial Overview</h2>
+            <div class="summary-card" id="total-income">Total Income: $0</div>
+            <div class="summary-card" id="total-expenses">Total Expenses: $0</div>
+            <div class="summary-card" id="balance">Balance: $0</div>
+        </section>
+
+        <section class="form-container">
+            <h2>Add a New Transaction</h2>
+            <form id="finance-form">
+                <label for="type">Type:</label>
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="food">Food</option>
+                    <option value="rent">Rent</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="savings">Savings</option>
+                    <option value="investment">Investment</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="amount">Amount ($):</label>
+                <input type="number" id="amount" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="chart-wrapper">
+            <div class="chart-container">
+                <h2>Income Breakdown</h2>
+                <canvas id="incomeChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Spending Breakdown</h2>
+                <canvas id="expenseChart"></canvas>
+            </div>
+        </section>
+
+        <section class="history-container">
+            <h2>Transaction History</h2>
+            <input type="text" id="search" placeholder="Search by category or date...">
+            <ul id="history-list"></ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

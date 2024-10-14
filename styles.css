@@ -1,0 +1,205 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e1e8ed;
+}
+
+/* Summary Section */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.summary-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.4em;
+    color: #4a90e2;
+}
+
+/* Form Section */
+.form-container {
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-container form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #666;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Chart Section */
+.chart-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+canvas {
+    max-width: 100%;
+    height: 100px; /* Smaller chart size */
+    margin-top: 15px;
+}
+
+/* History Section */
+.history-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.history-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+#history-list li:hover {
+    background-color: #f3f3f3;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+body.dark .header {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+body.dark button {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+body.dark .summary-card,
+body.dark .form-container,
+body.dark .chart-container,
+body.dark .history-container {
+    background: #3a3a3a;
+    color: #e0e0e0;
+}
+
+body.dark input, 
+body.dark select {
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+    border: 1px solid #666;
+}
+
+/* Adjustments for Transaction History in Dark Mode */
+body.dark #history-list li {
+    border-bottom: 1px solid #555;
+    color: #e0e0e0; /* Change text color to improve contrast */
+}
+
+body.dark #history-list li:hover {
+    background-color: #444; /* Darker background on hover */
+}
